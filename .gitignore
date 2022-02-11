@@ -1,4 +1,5 @@
 config.json
+keyIds.json
 node_modules
 .env
 .eslintrc.json
