@@ -1,4 +1,4 @@
-### Doonbot
+### Grindbot
 A project aimed at improving JS skills, done in spare time. Feel free to use it how you'd like.
 
 # The following files must be created for the bot to work.
