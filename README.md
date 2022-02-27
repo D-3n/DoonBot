@@ -18,4 +18,4 @@ A project aimed at improving JS skills, done in spare time. Feel free to use it 
 
 ## To do:
 
-- [] Remove clientId from config.json
+- [ ] Remove clientId from config.json
