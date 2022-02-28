@@ -39,7 +39,7 @@ module.exports = {
 
 
 	// Check if there are arguments for the command, and explain proper usage if there are not.
-	if (ncommand.args && !args.length && !ncommand.optionalargs) {
+	if (ncommand.args && !args.length) {
 		let reply = 'The command was used without the required arguments.';
 
 		if (ncommand.usage) {
