@@ -5,10 +5,6 @@ module.exports = {
 		.setDescription('Flip a coin'),
 	async execute(interaction) {
         
-        const rnum = Math.random()
-        
-        const coin = rnum > 0.5 ? 'heads' : 'tails'
-
-        return interaction.reply(`You got ${coin}.`)
+        return interaction.reply(`You got ${Math.random() < 0.5 ? 'heads' : 'tails'}.`)
 	},
 };
