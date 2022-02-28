@@ -1,5 +1,5 @@
 const { prefix } = require('../config.json');
-const { developerId } = require('../keyIds.json');
+const { developerId, blacklistedIds } = require('../keyIds.json');
 module.exports = {
 	name: 'messageCreate',
 	execute(message) {
@@ -18,6 +18,9 @@ module.exports = {
 
 	// Check there is actually a command
 	if (!ncommand) return;
+
+	// Blacklisted user check
+	if (blacklistedIds.includes(message.author.id)) return console.log(`${message.author.tag} (${message.author.id}) is blacklisted.`)
 
 	// Check if the command requires permissions to speak
 	if (!message.channel.type === 'dm') {

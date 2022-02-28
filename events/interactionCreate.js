@@ -1,11 +1,15 @@
 const { Permissions } = require('discord.js');
-const { developerId } = require('../keyIds.json');
+const { developerId, blacklistedIds } = require('../keyIds.json');
 
 module.exports = {
 	name: 'interactionCreate',
 	execute(interaction) {
 		console.log(`${interaction.user.tag} in #${interaction.channel.name} (${interaction.guild.name}) triggered an interaction.`);
 		if (!interaction.isCommand()) return;
+
+		// Blacklisted user check
+		if (blacklistedIds.includes(interaction.user.id)) return console.log(`${interaction.user.tag} (${interaction.user.id}) is blacklisted.`)
+		
 		if (!interaction.channel.permissionsFor(interaction.client.user).has(Permissions.FLAGS.SEND_MESSAGES)) return console.log('Attempted to run a command without permission to send messages.');
 	
 		// Check bot has correct perms before running commands.

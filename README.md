@@ -14,10 +14,12 @@ A project aimed at improving JS skills, done in spare time. Feel free to use it 
 
 ## KeyIDs file requirements:
 #### This file should be a json in the main directory.
-**developerId** - This should be a string with the ID of the bot's host.
+**developerId** - This should be a string with the ID of the bot's host.  
+**blacklistedIds** - This should be an array containing strings of blacklisted users' IDs.
 
 ## To do:
 
 - [ ] Remove clientId from config.json
 - [X] Hide personal commands from .gitignore
 - [X] Remove optionalargs from prefixed commands
+- [X] Allow user blacklisting
