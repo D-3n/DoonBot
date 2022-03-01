@@ -1,4 +1,4 @@
-### Grindbot
+### Doonbot
 A project aimed at improving JS skills, done in spare time. Feel free to use it how you'd like.
 
 # The following files must be created for the bot to work.
@@ -23,3 +23,4 @@ A project aimed at improving JS skills, done in spare time. Feel free to use it 
 - [X] Hide personal commands from .gitignore
 - [X] Remove optionalargs from prefixed commands
 - [X] Allow user blacklisting
+- [ ] Add a database for blacklisting, modding, etc.
