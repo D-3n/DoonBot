@@ -36,7 +36,7 @@ module.exports = {
 
 	
 	// Check if the users has max permissions
-	if (ncommand.maxPerms && developerIds.includes(message.author.id)) {
+	if (ncommand.maxPerms && !(developerIds.includes(message.author.id))) {
 		return message.channel.send('You do not have permission to use this command.')
 	}
 

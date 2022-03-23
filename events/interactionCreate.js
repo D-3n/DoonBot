@@ -29,7 +29,7 @@ module.exports = {
 	
 		if (!command) return;
 	
-		if (command.devCommand && !developerIds.includes(interaction.user)) {
+		if (command.devCommand && !(developerIds.includes(interaction.user.id))) {
 			return interaction.reply({ content: 'You don\'t have permission to use this command.', ephemeral: true})
 		}
 	
