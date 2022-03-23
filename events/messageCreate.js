@@ -1,5 +1,5 @@
 const { prefix } = require('../config.json');
-const { developerId, blacklistedIds } = require('../keyIds.json');
+const { developerIds, blacklistedIds } = require('../keyIds.json');
 module.exports = {
 	name: 'messageCreate',
 	execute(message) {
@@ -36,7 +36,7 @@ module.exports = {
 
 	
 	// Check if the users has max permissions
-	if (ncommand.maxPerms && message.author.id != developerId) {
+	if (ncommand.maxPerms && developerIds.includes(message.author.id)) {
 		return message.channel.send('You do not have permission to use this command.')
 	}
 

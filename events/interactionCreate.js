@@ -1,5 +1,5 @@
 const { Permissions } = require('discord.js');
-const { developerId, blacklistedIds } = require('../keyIds.json');
+const { developerIds, blacklistedIds } = require('../keyIds.json');
 
 module.exports = {
 	name: 'interactionCreate',
@@ -29,7 +29,7 @@ module.exports = {
 	
 		if (!command) return;
 	
-		if (command.devCommand && interaction.user != developerId) {
+		if (command.devCommand && !developerIds.includes(interaction.user)) {
 			return interaction.reply({ content: 'You don\'t have permission to use this command.', ephemeral: true})
 		}
 	

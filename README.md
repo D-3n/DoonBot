@@ -14,7 +14,7 @@ A project aimed at improving JS skills, done in spare time. Feel free to use it 
 
 ## KeyIDs file requirements:
 #### This file should be a json in the main directory.
-**developerId** - This should be a string with the ID of the bot's host.  
+**developerIds** - This should be an array containing the IDs of any developers.
 **blacklistedIds** - This should be an array containing strings of blacklisted users' IDs.
 
 ## To do:
