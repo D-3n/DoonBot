@@ -1,15 +1,8 @@
 // Compares two arrays and returns true if a common value is found.
 module.exports = function CommonValues(array1, array2) {
-    for(let i = 0; i < array1.length; i++) {
 
-        for(let j = 0; j < array2.length; j++) {
+    const commonTerms = array1.filter( x => array2.includes(x))
+    return Boolean(commonTerms.length)
 
-            if(array1[i] === array2[j]) {
-                return true
-            }
-        
-        }
-
-    }
 }
 

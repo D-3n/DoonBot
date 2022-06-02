@@ -1,21 +1,13 @@
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
 const { token } = require('./config.json');
-const Sequelize = require('sequelize')
 
 const myIntents = new Intents();
 myIntents.add(Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_BANS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_PRESENCES, Intents.FLAGS.GUILD_VOICE_STATES)
 
 const client = new Client({ intents: myIntents });
 
-// Database initialization
 
-const sequelize = new Sequelize('database', 'user', 'password', {
-	host: 'localhost',
-	dialect: 'sqlite',
-	logging: false,
-	storage: 'database.sqlite',
-});
 
 // Slash command map
 
@@ -38,7 +30,6 @@ for (const file of ncommandFiles) {
 	const ncommand = require(`./ncommands/${file}`);
 	client.ncommands.set(ncommand.name, ncommand);
 }
-
 
 // Handle events
 
